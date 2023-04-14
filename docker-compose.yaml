@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  # PYTHON CONTAINER
+  weapons-detector:
+    build: .
+    ports:
+      - "9000:80"
+    hostname: weapons-detector
+    container_name: weapons-detector
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 4g
